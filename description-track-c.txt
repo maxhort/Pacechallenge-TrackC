@@ -1,0 +1,12 @@
+1. Perform shortest path heuristic (maximum for 200 different terminals as origin)
+	- Pick terminal as origin
+	- Sort other terminals according to distance to terminal descending
+	- connect each terminal via shortest path to origin and enhance solution
+	- store best solution
+	- repeat
+
+2. Take best solution and perform local optimization
+	- check best steinertree for every combination of 3 terminals (then 4, 5, ...)
+	- perform until time runs out
+	- Optimization of path between terminals resembles a steinertree problem
+	- solve according to Dijkstra-Steiner (https://arxiv.org/pdf/1406.0492.pdf)
